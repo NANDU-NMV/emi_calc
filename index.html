@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Sum Calculator</title> 
+    <style>
+        body { 
+			background-color: #504897;  
+		} 
+        .form { 
+			width: 70%; 
+			text-align: center; 
+            color: rgb(255, 255, 255);
+            
+		}
+        h1{
+            color: rgb(255, 255, 255);
+            margin-top: 10%;
+        }
+        input{
+            color: rgb(1, 9, 15);
+            background-color: rgb(167, 159, 159);
+        }
+    </style>
+</head> 
+<body> 
+    <form name="frmsum">
+    <center>
+        <div class="form">
+            <h1>EMI Calculator</h1>
+            <p>No worries..we can sort it!!</p>
+            Total Amount
+            <input type="text" name="num1" id="num1"><br><br>
+            Interest (%)
+            <input type="text" name="num2" id="num2"><br><br>
+            Years
+            <input type="text" name="num3" id="num3"><br><br>
+            EMI Amount 
+            <input type="text" name="sum" id="sum"><br><br>
+            <input type="button" value="Calculate" onclick="calculatesum()">
+        </div>
+    </center>
+    </form>
+    <script lang="javascript">
+        function calculatesum(){
+            var num1, num2,num3, ans;
+            num1 = Number(document.frmsum.num1.value) ;
+            num2 = Number(document.frmsum.num2.value) ;
+            num3 = Number(document.frmsum.num3.value) ;
+            ans = ((num1*num2)/100)*num3;
+            document.frmsum.sum.value = ans;
+        }
+    </script>
+</body> 
+</html> 
